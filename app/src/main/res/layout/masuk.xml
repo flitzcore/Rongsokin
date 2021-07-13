@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".RegisterActivity">
+
+    <TextView
+        android:id="@+id/text_rongsokin_atas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:text="RONGSOKIN"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageRongsokin"
+        android:layout_width="190dp"
+        android:layout_height="193dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_rongsokin_atas"
+        app:srcCompat="@mipmap/rongsokin_kuning" />
+
+    <ImageView
+        android:id="@+id/garis"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:background="@drawable/background_gradient"
+        android:gravity="center_horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/HeaderMasuk"
+        app:layout_constraintTop_toBottomOf="@+id/imageRongsokin" />
+
+    <TextView
+        android:id="@+id/HeaderMasuk"
+        android:layout_width="233dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="50dp"
+        android:background="@null"
+        android:ems="10"
+        android:gravity="center_vertical"
+        android:singleLine="false"
+        android:text="Masuk"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/editTextEmailNoTelp"
+        app:layout_constraintTop_toBottomOf="@+id/imageRongsokin" />
+
+    <EditText
+        android:id="@+id/editTextEmailNoTelp"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/rect_border"
+        android:ems="10"
+        android:gravity="center_vertical"
+        android:hint="  Alamat Email atau Nomor Telpon"
+        android:paddingLeft="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.508"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/HeaderMasuk" />
+
+    <EditText
+        android:id="@+id/editTextPass"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@drawable/rect_border"
+        android:ems="10"
+        android:gravity="center_vertical"
+        android:hint="  Kata Sandi"
+        android:inputType="textPassword"
+        android:paddingLeft="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/editTextEmailNoTelp"
+        app:layout_constraintStart_toStartOf="@+id/editTextEmailNoTelp"
+        app:layout_constraintTop_toBottomOf="@+id/editTextEmailNoTelp" />
+
+    <Button
+        android:id="@+id/button_lupa_sandi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:background="@null"
+        android:gravity="bottom"
+        android:text="Lupa Kata Sandi ?"
+        android:textAllCaps="false"
+        android:textColor="@color/gray"
+        app:layout_constraintBottom_toTopOf="@+id/masukButton"
+        app:layout_constraintEnd_toEndOf="@+id/masukButton"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPass" />
+
+    <Button
+        android:id="@+id/masukButton"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="75dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginRight="30dp"
+        android:background="@color/black"
+        android:text="Masuk"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/editTextPass"
+        app:layout_constraintStart_toStartOf="@+id/editTextPass"
+        app:layout_constraintTop_toBottomOf="@+id/editTextPass" />
+
+    <TextView
+        android:id="@+id/textBelumMemilikiAkun"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Belum Memiliki Akun?"
+        android:textColor="@color/gray"
+        app:layout_constraintEnd_toEndOf="@+id/masukButton"
+        app:layout_constraintStart_toStartOf="@+id/masukButton"
+        app:layout_constraintTop_toBottomOf="@+id/masukButton" />
+
+    <Button
+        android:id="@+id/button_daftar_sekarang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:gravity="top"
+        android:text="Daftar Sekarang"
+        android:textAllCaps="false"
+        android:textColor="@color/yellow"
+        app:layout_constraintEnd_toEndOf="@+id/textBelumMemilikiAkun"
+        app:layout_constraintStart_toStartOf="@+id/textBelumMemilikiAkun"
+        app:layout_constraintTop_toBottomOf="@+id/textBelumMemilikiAkun" />
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
