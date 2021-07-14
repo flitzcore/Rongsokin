@@ -1,3 +1,18 @@
 <resources>
-    <string name="app_name">b1</string>
+    <string name="app_name">RONGSOKIN</string>
+    <string name="daftar">Daftar</string>
+    <string name="unameHint">  UserName</string>
+    <string name="alamatEmailHint">  Alamat Email</string>
+    <string name="nomorSelulerHint">  Nomor Seluler</string>
+    <string name="passHint">  Kata Sandi</string>
+    <string name="setujui">Saya menyetujui syarat dan ketentuan aplikasi ini</string>
+    <string name="buatakun">Buat Akun</string>
+    <string name="masukFB">Masuk Dengan Facebook</string>
+    <string name="masukGoogle">Masuk Dengan Google</string>
+    <string name="sudahPunyaAkun">Sudah Memiliki Akun?</string>
+    <string name="login">Masuk</string>
+    <string name="lupa">Lupa Kata Sandi ?</string>
+    <string name="belumMemilikiAkun">Belum Memiliki Akun?</string>
+    <string name="daftarSekarang">Daftar Sekarang</string>
+
 </resources>

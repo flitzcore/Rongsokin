@@ -8,7 +8,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context=".RegisterActivity">
+    tools:context=".activity.RegisterActivity">
 
         <TextView
             android:id="@+id/HeaderDaftar"
@@ -18,7 +18,7 @@
             android:background="@null"
             android:ems="10"
             android:singleLine="false"
-            android:text="Daftar"
+            android:text="@string/daftar"
             android:textColor="@color/black"
             android:textSize="36sp"
             android:textStyle="bold"
@@ -38,7 +38,7 @@
             android:layout_marginRight="30dp"
             android:background="@drawable/rect_border"
             android:gravity="center_vertical"
-            android:hint="Username"
+            android:hint="@string/unameHint"
             android:inputType="textPersonName"
             android:paddingLeft="10dp"
             android:textSize="18sp"
@@ -57,7 +57,7 @@
             android:layout_marginRight="30dp"
             android:background="@drawable/rect_border"
             android:gravity="center_vertical"
-            android:hint="Alamat Email"
+            android:hint="@string/alamatEmailHint"
             android:inputType="textEmailAddress"
             android:paddingLeft="10dp"
             android:textSize="18sp"
@@ -76,7 +76,7 @@
             android:layout_marginRight="30dp"
             android:background="@drawable/rect_border"
             android:gravity="center_vertical"
-            android:hint="Nomor Seluler"
+            android:hint="@string/nomorSelulerHint"
             android:inputType="phone"
             android:paddingLeft="10dp"
             android:textSize="18sp"
@@ -97,7 +97,7 @@
             android:background="@drawable/rect_border"
             android:ems="10"
             android:gravity="center_vertical"
-            android:hint="  Kata Sandi"
+            android:hint="@string/passHint"
             android:inputType="textPassword"
             android:paddingLeft="10dp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -124,7 +124,7 @@
             android:layout_marginTop="20dp"
             android:layout_marginEnd="30dp"
             android:layout_marginRight="30dp"
-            android:text="Saya menyetujui syarat dan ketentuan aplikasi ini"
+            android:text="@string/setujui"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/Password" />
@@ -157,7 +157,7 @@
         android:layout_marginEnd="30dp"
         android:layout_marginRight="30dp"
         android:background="@color/blue"
-        android:text="Masuk Dengan Facebook"
+        android:text="@string/masukFB"
         android:drawableLeft="@mipmap/fb"
         android:paddingLeft="20dp"
         android:gravity="center"
@@ -182,7 +182,7 @@
             android:drawableLeft="@mipmap/g"
             android:gravity="center"
             android:paddingLeft="10dp"
-            android:text="Masuk Dengan Google"
+            android:text="@string/masukGoogle"
             android:textAllCaps="false"
             android:textColor="@color/white"
             android:textSize="18dp"
@@ -191,6 +191,36 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/masukFB" />
 
+        <TextView
+            android:id="@+id/sudahMemilikiAkun"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginRight="30dp"
+            android:text="@string/sudahPunyaAkun"
+            android:textColor="@color/gray"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/masukGoogle" />
+
+        <Button
+            android:id="@+id/button_login_sekarang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:gravity="center_vertical"
+            android:text="@string/login"
+            android:layout_marginLeft="10dp"
+            android:textSize="18dp"
+            android:textAllCaps="false"
+            android:textColor="@color/yellow"
+
+            app:layout_constraintBottom_toBottomOf="@+id/sudahMemilikiAkun"
+            app:layout_constraintStart_toEndOf="@+id/sudahMemilikiAkun"
+            app:layout_constraintTop_toTopOf="@+id/sudahMemilikiAkun" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
