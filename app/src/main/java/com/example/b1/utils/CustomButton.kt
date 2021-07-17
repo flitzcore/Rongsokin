@@ -6,5 +6,4 @@ import androidx.appcompat.widget.AppCompatButton
 
 class CustomButton(context :Context, attrs: AttributeSet):AppCompatButton(context,attrs){
 
-
 }

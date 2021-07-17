@@ -18,6 +18,13 @@ class LoginActivity : AppCompatActivity() {
             startActivity(Intent( this@LoginActivity, RegisterActivity::class.java))
             finish()
         }
+        button_lupa_sandi.setOnClickListener {
+            Toast.makeText(
+                this@LoginActivity,
+                "Kasihan :(",
+                Toast.LENGTH_SHORT)
+                .show()
+        }
         masukButton.setOnClickListener {
             when{
                 TextUtils.isEmpty(editTextEmailNoTelp.text.toString().trim{it<=' '})->{

@@ -14,7 +14,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@mipmap/rongsokin_kuning" />
+        app:srcCompat="@drawable/rongsokin_kuning" />
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"

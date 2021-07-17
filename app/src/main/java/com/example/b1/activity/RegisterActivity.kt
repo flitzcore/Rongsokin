@@ -116,7 +116,7 @@ class RegisterActivity : AppCompatActivity() {
         val clickableSpan=object : ClickableSpan()
         {
             override fun onClick(widget: View) {
-                Toast.makeText(this@RegisterActivity, "One",Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@RegisterActivity, "Belum makai syarat",Toast.LENGTH_SHORT).show()
 
             }
 
