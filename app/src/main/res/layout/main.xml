@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
 
-    tools:context=".activity.RegisterActivity">
+    tools:context=".activity.MainActivity">
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -19,8 +19,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             app:mbn_countBackgroundColor="#ff6f00"
-            app:mbn_countTextColor="#5000"
-            app:mbn_countTypeface="fonts/SourceSansPro-Regular.ttf"
+            app:mbn_countTextColor="#000"
             app:mbn_defaultIconColor="#909090"
             app:mbn_rippleColor="@color/purple_500"
             app:mbn_selectedIconColor="@color/purple_500"
