@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">RONGSOKIN</string>
     <string name="daftar">Daftar</string>
-    <string name="unameHint">  UserName</string>
+    <string name="unameHint">  Nama Pengguna</string>
     <string name="alamatEmailHint">  Alamat Email</string>
     <string name="nomorSelulerHint">  Nomor Seluler</string>
     <string name="passHint">  Kata Sandi</string>
@@ -17,6 +17,8 @@
     <string name="username">UserName</string>
     <string name="saldo">999</string>
     <string name="rp">Rp.</string>
+    <string name="wait">Harap Tunggu&#8230;</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 

@@ -9,10 +9,15 @@ import android.text.method.LinkMovementMethod
 import android.text.style.ClickableSpan
 import android.util.Patterns
 import android.view.View
+import android.widget.BaseAdapter
 import android.widget.Toast
 import com.example.b1.R
+import com.example.b1.firestore.FirestoreClass
+import com.example.b1.model.User
+import com.example.b1.utils.BaseActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
+import kotlinx.android.synthetic.main.action_bar.*
 import kotlinx.android.synthetic.main.daftar.*
 import kotlinx.android.synthetic.main.masuk.*
 
@@ -21,6 +26,7 @@ class RegisterActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.daftar)
+
         button_login_sekarang.setOnClickListener {
             startActivity(Intent( this@RegisterActivity, LoginActivity::class.java))
             finish()
@@ -74,13 +80,26 @@ class RegisterActivity : AppCompatActivity() {
                     val username: String =tvUsername.text.toString().trim{it<= ' '}
                     val email: String =tvAlamatemail.text.toString().trim{it<= ' '}
                     val nomorSeluler: String =tvNomorseluler.text.toString().trim{it<= ' '}
+                    //TODO add nomorSeluler ke Firestore
                     val password: String =Password.text.toString().trim{it<= ' '}
 
                     if(syaratketentuan.isChecked){
+                        BaseActivity().showProgressDialog(this)
                         FirebaseAuth.getInstance().createUserWithEmailAndPassword(email,password).addOnCompleteListener(
                             {task ->
+                                BaseActivity().hideProgressDialog(this)
                                 if(task.isSuccessful){
                                     val firebaseUser: FirebaseUser = task.result!!.user!!
+
+                                    val user= User(
+                                        firebaseUser.uid,
+                                        username,
+                                        email,
+                                        "",
+                                        nomorSeluler.toLong(),
+                                        0
+                                    )
+                                    FirestoreClass().registerUser(this@RegisterActivity,user)
 
                                     Toast.makeText(
                                         this@RegisterActivity,
@@ -90,14 +109,14 @@ class RegisterActivity : AppCompatActivity() {
 
                                     val intent = Intent(this@RegisterActivity, LoginActivity::class.java)
                                     intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-                                    intent.putExtra("user_id", firebaseUser.uid)
-                                    intent.putExtra("email_id", email)
+
                                     startActivity(intent)
+                                    FirebaseAuth.getInstance().signOut()
                                     finish()
                                 }else{
                                     Toast.makeText(
                                         this@RegisterActivity,
-                                        "Berhasil Mendaftar",
+                                        task.exception!!.message.toString(),
                                         Toast.LENGTH_SHORT
                                     ).show()
                                 }

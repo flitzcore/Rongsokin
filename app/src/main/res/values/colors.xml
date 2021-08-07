@@ -12,5 +12,7 @@
     <color name="yellow">#ff9900</color>
     <color name="light_yellow">#FFFF66</color>
     <color name="gray">#808080</color>
+    <color name="dark_blue">#191970</color>
     <color name="light_grey">#F5F5F5</color>
+
 </resources>

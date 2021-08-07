@@ -13,27 +13,34 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.main)
 
+
+
         addFragment(HomeFragment.newInstance())
-        bottomBar.show(0)
-        bottomBar.add(MeowBottomNavigation.Model(0,R.drawable.ic_home))
-        bottomBar.add(MeowBottomNavigation.Model(1,R.drawable.ic_history))
-        bottomBar.add(MeowBottomNavigation.Model(2,R.drawable.ic_setting))
-        bottomBar.add(MeowBottomNavigation.Model(3,R.drawable.ic_user))
+        bottomBar.show(2)
+        bottomBar.add(MeowBottomNavigation.Model(0,R.drawable.ic_news))
+        bottomBar.add(MeowBottomNavigation.Model(1,R.drawable.ic_chat))
+        bottomBar.add(MeowBottomNavigation.Model(2,R.drawable.ic_home))
+        bottomBar.add(MeowBottomNavigation.Model(3,R.drawable.ic_history))
+        bottomBar.add(MeowBottomNavigation.Model(4,R.drawable.ic_setting))
+
 
 
         bottomBar.setOnClickMenuListener {
             when(it.id){
                 0->{
-                    replaceFragment(HomeFragment.newInstance())
+                    replaceFragment(NewsFragment.newInstance())
                 }
                 1->{
-                    replaceFragment(HistoryFragment.newInstance())
+                    replaceFragment(ChatFragment.newInstance())
                 }
                 2->{
-                    replaceFragment(SettingFragment.newInstance())
+                    replaceFragment(HomeFragment.newInstance())
                 }
                 3->{
-                    replaceFragment(ProfileFragment.newInstance())
+                    replaceFragment(HistoryFragment.newInstance())
+                }
+                4->{
+                    replaceFragment(SettingFragment.newInstance())
                 }
                 else->{
                     replaceFragment(HomeFragment.newInstance())
